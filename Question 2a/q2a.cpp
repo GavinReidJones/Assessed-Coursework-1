@@ -2,7 +2,7 @@
 //
 // Program written by Gavin Reid-Jones for Assesed Course Work 1 last edited 30/10/17
 
-//include statements to allow the program to access in/out fuctionality, maths functions and the vector class.
+//include statements to allow the program to access in/out fuctionality and maths functions .
 #include "stdafx.h"
 #include <iostream>
 #include <cmath>
@@ -16,7 +16,7 @@ void quadrature(double n, double **quadrature);
 int main()
 {
 	//values that the Legendre function uses to calculate the result
-	double dNval = 4;
+	double dNval = 7;
 	//pointer variable that acts as the array
 	double **dQuadrature;
 	
