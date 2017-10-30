@@ -1,0 +1,4 @@
+Based on the code you have written in part(a), in a file diff legendre.cpp write a C++
+function called diff legendre which evaluates the derivative of the nth order Legendre
+polynomial Pn(x) at a given point x. Write a test program called q1b.cpp to compute
+the following values: P02(0.3), P06(−0.5) and P09(0.4).
