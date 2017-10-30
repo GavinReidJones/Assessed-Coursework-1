@@ -1,0 +1,3 @@
+In a file legendre.cpp write a C++ function called legendre which calculates the
+Legendre polynomial Pn(x), n ≥ 0, using the above formula. Write a test program called
+q1a.cpp to compute the following values: P2(0.3), P6(−0.5) and P9(0.4).
