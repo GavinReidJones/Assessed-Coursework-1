@@ -1,0 +1,11 @@
+In a file gauss quadrature.cpp write a C++ function called gauss quadrature which
+calculates the quadrature points and weights (xi
+, wi), i = 1, . . . , n, where xi, i = 1, . . . , n,
+are the zeros of the nth order Legendre polynomial Pn(x). The function gauss quadrature
+should be declared to be void; the arrays to store the quadrature points and weights should
+be dynamically allocated before calling gauss quadrature. To compute xi, i = 1, . . . , n,
+use a Newton iteration for each root; as an initial guess for the ith root xi, i = 1, . . . , n,
+let x(0)i = − cos ((2i − 1)/2n )π)
+
+Write a test program called q2a.cpp to compute the quadrature points and weights when
+n = 2, 4, 7.
