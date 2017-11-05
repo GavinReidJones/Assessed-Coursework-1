@@ -16,7 +16,7 @@ void quadrature(double n, double **quadrature);
 int main()
 {
 	//values that the Legendre function uses to calculate the result
-	double dNval = 7;
+	double dNval = 2;
 	//pointer variable that acts as the array
 	double **dQuadrature;
 	
@@ -45,6 +45,15 @@ int main()
 	}
 	cout << "\n \n";
 	
+	// deletes the columns of the matrix used for the quadrature once it has performed the calculation
+	for (int i = 0; i < 2; i++)
+	{
+		delete[] dQuadrature[i];
+	}
+	
+	// deletes the rows of the matrix
+	delete[] dQuadrature;
+
 	return 0;
 }
 

@@ -10,7 +10,7 @@
 //Allows the program to call functions from the standard library without referencing it.
 using namespace std;
 // Defines the constant pi that is used to generate the initial estimate for the root of the legendre polynomial
-double const pi = 3.141592653;
+double const pi = atan(1)*4;
 
 // Declaring the functions that are used from the other .cpp files.
 double legendre(double n, double x);
@@ -21,7 +21,7 @@ void quadrature(double n, double **quadrature)
 	// boolean variable to check whether the newton method has produced an accurate enough solution
 	bool accurate =false;
 	//variables to store the estimates for the root of the legendre polynomial
-	double xn1 = 0, xn;
+	double xn1 = 0, xn, fx1, fx0;
 	
 	//loop used to set an accurate value for each value of the quadrature
 	for (int i =1; i<n+1; i++)
@@ -33,8 +33,10 @@ void quadrature(double n, double **quadrature)
 		//the loop used to implement newton iteration to find the root
 		while (accurate == false)
 		{
+			fx0 = legendre(n, xn);
+			fx1 = diff_legendre(n, xn);
 			//implements the newton method to find a better approximation to the solution
-			xn1 = xn - (legendre(n, xn) / diff_legendre(n, xn));
+			xn1 = xn - ( fx0/fx1 );
 			//checks whether the new approximation is accurate enough
 			if (abs(xn1 - xn) < pow(10,-15))
 			{
