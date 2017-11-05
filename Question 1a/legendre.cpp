@@ -26,7 +26,7 @@ double legendre(double n, double x)
 	for (i = 2; i < n + 1; i++)
 	{
 		//calculates the recursion formula for the next step in the process and then stores it in the result variable xn2
-		xn2 = (((2 * i) + 1) / (i + 1))*x*xn1 - (i / (i + 1))*xn;
+		xn2 = (((2 * i) - 1) / (i))*x*xn1 - ((i-1) / i )*xn;
 		xn = xn1;
 		xn1 = xn2;
 	}
