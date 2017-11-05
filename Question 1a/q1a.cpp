@@ -1,6 +1,6 @@
 // q1a.cpp : Defines the entry point for the console application.
 //
-// Program written by Gavin Reid-Jones for Assesed Course Work 1 last edited 30/10/17
+// Program written by Gavin Reid-Jones for Assesed Course Work 1 last edited 5/1/17
 
 
 //include statements to allow the program to access in/out fuctionality and maths functions.
@@ -26,7 +26,33 @@ int main()
 	dResult=legendre(iNval, dXval);
 
 	//displaying the result to the user
-	cout << "The Legendre Polynomial is : " << dResult << "\n";
+	cout << "The Legendre Polynomial P2(0.3) is : " << dResult << "\n";
+
+	//values that the Legendre function uses to calculate the result
+	dXval = -0.5;
+	iNval = 6;
+	dResult;
+
+	//Calling the Legendre function
+	dResult = legendre(iNval, dXval);
+
+	//displaying the result to the user
+	cout << "The Legendre Polynomial P6(-0.5) is : " << dResult << "\n";
+
+
+	//values that the Legendre function uses to calculate the result
+	dXval = 0.4;
+	iNval = 9;
+	dResult;
+
+	//Calling the Legendre function
+	dResult = legendre(iNval, dXval);
+
+	//displaying the result to the user
+	cout << "The Legendre Polynomial P9(0.4) is : " << dResult << "\n";
+
+
+
 	return 0;
 }
 
