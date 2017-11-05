@@ -13,10 +13,15 @@ using namespace std;
 // Declaring the functions that are used from the other .cpp files.
 double integrate_f(double n, double **quadrature);
 
+void quadrature(double n, double **quadrature);
+
+double const pi = atan(1) * 4;
+
 int main()
 {
+	double dSolution = -sinh(pi);
 	//values that the Legendre function uses to calculate the result
-	double dNval =10;
+	double dNval =4;
 	//pointer variable that acts as the array
 	double **dQuadrature;
 
@@ -28,6 +33,9 @@ int main()
 	{
 		dQuadrature[i] = new double[dNval];
 	}
+	
+	quadrature(dNval, dQuadrature);
+
 	dResult = integrate_f(dNval, dQuadrature);
 
 	//prints a display of the result of the quadrature function
@@ -35,7 +43,7 @@ int main()
 	cout << "x";
 	for (int i = 1; i < dNval + 1; i++)
 	{
-		cout << " " << dQuadrature[0][i - 1] << " ";
+		cout << " " << dQuadrature[0][i - 1]*pi << " ";
 	}
 	cout << "\n" << "w";
 	for (int i = 1; i < dNval + 1; i++)
@@ -45,9 +53,11 @@ int main()
 	cout << "\n \n";
 
 	//calls the quadrature function, while passing the n value given by the user and the array declared previously
-	
 
+	double dError = abs(dSolution - dResult);
 	cout << "result = " << dResult << "\n";
+	cout << "error = " << dError << "\n";
+
 
 	// deletes the columns of the matrix used for the quadrature once it has performed the calculation
 	for (int i = 0; i < 2; i++)
