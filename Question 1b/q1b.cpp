@@ -1,6 +1,6 @@
 // q1b.cpp : Defines the entry point for the console application.
 //
-// Program written by Gavin Reid-Jones for Assesed Course Work 1 last edited 30/10/17
+// Program written by Gavin Reid-Jones for Assesed Course Work 1 last edited 5/11/17
 
 
 //include statements to allow the program to access in/out fuctionality, maths functions and the vector class.
@@ -24,6 +24,26 @@ int main()
 	//Calling the Legendre function
 	dResult = diff_legendre(iNval, dXval);
 
-	cout << "The Differentiated Legendre Polynomial is : " << dResult << "\n";
+	cout << "The Differentiated Legendre Polynomial P'2(0.3) is : " << dResult << "\n";
+
+	//values that the Legendre function uses to calculate the result
+	dXval = -0.5;
+	iNval = 6;
+	dResult;
+
+	//Calling the Legendre function
+	dResult = diff_legendre(iNval, dXval);
+
+	cout << "The Differentiated Legendre Polynomial P'6(-0.5) is : " << dResult << "\n";
+
+	//values that the Legendre function uses to calculate the result
+	dXval = 0.4;
+	iNval = 9;
+	dResult;
+
+	//Calling the Legendre function
+	dResult = diff_legendre(iNval, dXval);
+
+	cout << "The Differentiated Legendre Polynomial P'9(0.4) is : " << dResult << "\n";
 	return 0;
 }
